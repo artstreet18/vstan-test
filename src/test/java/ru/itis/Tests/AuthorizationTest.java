@@ -20,9 +20,6 @@ public class AuthorizationTest extends TestBase {
                     login("login").
                     password("Password").
                     build());
-
-//    driver.manage().window().setSize(new Dimension(1058, 780));
-//    driver.findElement(By.cssSelector("button")).click();
   }
 
   @Epic("TESTING FOR https://thenewschool.dev/ ")

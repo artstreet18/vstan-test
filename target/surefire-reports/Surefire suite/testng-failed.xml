@@ -6,8 +6,7 @@
       <class name="ru.itis.Tests.AuthorizationTest">
         <methods>
           <include name="authorization"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="authorizationStudent"/>
         </methods>
       </class> <!-- ru.itis.Tests.AuthorizationTest -->
     </classes>
