@@ -11,33 +11,29 @@ jobs:
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/openjdk
     docker:
       - image: cimg/openjdk:11.0
-
-    environment:
-      MAVEN_OPTS: -Xmx3200m
-
     steps:
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
-      - run: clean test
+      - run:
+          name: Build
+          command: mvn clean test
       # Then run your tests!
       - run:
-          name: Save test results
-            command: |
-              mkdir -p ~/test-results/junit/
-              find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
-          when: always
+          name: Make dir for results
+          command: mkdir -p ~/test-results/junit/
+      - run:
+          name: Save results
+          command: find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
       - store_test_results:
-                path: ~/test-results
+          path: ~/test-results
       - store_artifacts:
-        path: ~/test-results/junit
-
-
+          path: ~/test-results/junit
 workflows:
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-  sample:
+  sample: 
     jobs:
       - build-and-test
