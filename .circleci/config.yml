@@ -22,9 +22,11 @@ jobs:
       - run: clean test
       # Then run your tests!
       - run:
-          mkdir -p ~/test-results/junit/
-          find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
-        when: always
+          name: Save test results
+            command: |
+              mkdir -p ~/test-results/junit/
+              find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          when: always
                 - store_test_results:
                 path: ~/test-results
       - store_artifacts:
@@ -32,11 +34,11 @@ jobs:
       - store_artifacts:
         path: ~/test-results/junit
 
-#workflows:
-#  # Below is the definition of your workflow.
-#  # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
-#  # CircleCI will run this workflow on every commit.
-#  # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-#  sample:
-#    jobs:
-#      - build-and-test
+workflows:
+  # Below is the definition of your workflow.
+  # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
+  # CircleCI will run this workflow on every commit.
+  # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
+  sample:
+    jobs:
+      - build-and-test
