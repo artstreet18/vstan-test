@@ -24,7 +24,7 @@ jobs:
           command: mkdir -p ~/test-results/junit/
       - run:
           name: Save results
-          command: find . -type f -regex ".*/target/site/allure-maven-plugin/.*html" -exec cp {} ~/test-results/junit/ \;
+          command: find . -type f -regex ".*/target/site/allure-maven-plugin/*" -exec cp {} ~/test-results/junit/ \;
       - store_test_results:
           path: ~/test-results
       - store_artifacts:
