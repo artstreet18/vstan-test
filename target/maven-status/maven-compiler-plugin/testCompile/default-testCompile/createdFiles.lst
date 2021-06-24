@@ -1,9 +1,0 @@
-ru\itis\Tests\AuthorizationTest.class
-ru\itis\Pages\SignInPage.class
-ru\itis\Pages\MainPage.class
-ru\itis\Data\User$UserBuilder.class
-ru\itis\Pages\SignUpPage.class
-ru\itis\Tests\TestBase.class
-ru\itis\Pages\BasePage.class
-ru\itis\Data\User.class
-ru\itis\Pages\SetSettingsPage.class

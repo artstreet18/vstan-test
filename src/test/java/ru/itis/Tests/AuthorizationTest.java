@@ -25,7 +25,7 @@ public class AuthorizationTest extends TestBase {
   @Epic("TESTING FOR https://thenewschool.dev/ ")
   @Feature(value = "Authorization")
   @Severity(SeverityLevel.BLOCKER)
-  @Description("In this test we will login withstudent user")
+  @Description("In this test we will login with student user")
   @Story(value = "Test for login with correct credentials")
   @Test
   public void authorizationStudent() {
