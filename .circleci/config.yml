@@ -17,14 +17,14 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
-          command: mvn clean test
+          command: mvn clean test allure:report
       # Then run your tests!
       - run:
           name: Make dir for results
           command: mkdir -p ~/test-results/junit/
       - run:
           name: Save results
-          command: find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          command: find . -type f -regex ".*/target/site/allure-maven-plugin/.*html" -exec cp {} ~/test-results/junit/ \;
       - store_test_results:
           path: ~/test-results
       - store_artifacts:
