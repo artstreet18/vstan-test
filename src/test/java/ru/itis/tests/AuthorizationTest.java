@@ -8,31 +8,19 @@ import ru.itis.data.User;
 
 public class AuthorizationTest extends TestBase {
 
-  @Epic("TESTING FOR https://thenewschool.dev/ ")
-  @Feature(value = "Authorization")
-  @Severity(SeverityLevel.BLOCKER)
-  @Description("In this test we will login with coach user")
-  @Story(value = "Test for login with correct credentials")
-  @Test
-  public void authorization() {
+    @Epic("TESTING FOR https://thenewschool.dev/ ")
+    @Feature(value = "Authorization")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("In this test we will login with coach user")
+    @Story(value = "Test for login with correct credentials")
+    @Test
+    public void authorization() {
 
-    signIn.goTo()
-            .signIn(User.builder().
-                    login("login").
-                    password("password").
-                    build());
+        signIn.goTo()
+                .signIn(User.builder().
+                        login("login").
+                        password("password").
+                        build());
 
-  }
-
-  @Epic("TESTING FOR https://thenewschool.dev/ ")
-  @Feature(value = "Authorization")
-  @Severity(SeverityLevel.BLOCKER)
-  @Description("In this test we will login with student user")
-  @Story(value = "Test for login with correct credentials")
-  @Test
-  public void authorizationStudent() {
-    driver.get("https://thenewschool.dev/login");
-    driver.manage().window().setSize(new Dimension(1058, 780));
-    driver.findElement(By.cssSelector("button")).click();
-  }
+    }
 }
