@@ -12,11 +12,17 @@ import lombok.NoArgsConstructor;
 public class User {
     private String login;
     private String password;
+    private String email;
 
-    public String login(){
+    public String login() {
         return this.login;
     }
-    public String password(){
+
+    public String password() {
         return this.password;
+    }
+
+    public String email() {
+        return this.email;
     }
 }
