@@ -1,4 +1,4 @@
-package ru.itis.Data;
+package ru.itis.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

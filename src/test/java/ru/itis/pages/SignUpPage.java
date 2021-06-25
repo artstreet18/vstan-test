@@ -1,4 +1,4 @@
-package ru.itis.Pages;
+package ru.itis.pages;
 
 import org.openqa.selenium.WebDriver;
 

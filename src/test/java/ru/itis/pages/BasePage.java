@@ -1,8 +1,9 @@
-package ru.itis.Pages;
+package ru.itis.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,16 +12,18 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-
     public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 5);
+        PageFactory.initElements(driver, this);
     }
+
     @Step(value = "go to homePage")
     public BasePage goTo(){
         driver.get(SITE_URL);
         return this;
     }
+
     public void waitVisibility(By elementBy){
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
     }
@@ -45,6 +48,5 @@ public class BasePage {
         waitVisibility(elementBy);
         return driver.findElement(elementBy).getText();
     }
-
 
 }
