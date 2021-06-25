@@ -14,7 +14,7 @@ public class SignInPage extends BasePage {
     private By loginField;
     private By passwordField;
 
-    @Step(value = "Нажать на кнопку \"Войти\"")
+    @Step(value = "Авторизация")
     public SignInPage signIn(User user) {
         waitVisibility(signInButton);
 //        TODO:
@@ -24,19 +24,19 @@ public class SignInPage extends BasePage {
         return this;
     }
 
-    @Step(value = "Ввести login {login}")
+    @Step(value = "Ввод логина {login}")
     public SignInPage insertLogin(String login) {
         writeText(loginField, login);
         return this;
     }
 
-    @Step(value = "Ввести пароль: {password}")
+    @Step(value = "Ввод пароля: {password}")
     public SignInPage insertPassword(String password) {
         writeText(passwordField, password);
         return this;
     }
 
-    @Step(value = "Перейти на страницу авторизации")
+    @Step(value = "Переход на страницу авторизации")
     @Override
     public SignInPage goTo() {
         driver.get(SITE_URL);
