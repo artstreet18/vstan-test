@@ -1,0 +1,129 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestSuite",
+    "children" : [ {
+      "name" : "Test for Chrome browser",
+      "children" : [ {
+        "name" : "ru.itis.Tests.AuthorizationTest",
+        "children" : [ {
+          "name" : "authorization",
+          "uid" : "c593045b042b606e",
+          "parentUid" : "545ffcd85c70a94d1e4245dc065af2ad",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624632962938,
+            "stop" : 1624632975039,
+            "duration" : 12101
+          },
+          "flaky" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "authorizationStudent",
+          "uid" : "a1a72daccf264296",
+          "parentUid" : "545ffcd85c70a94d1e4245dc065af2ad",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624632975168,
+            "stop" : 1624632976663,
+            "duration" : 1495
+          },
+          "flaky" : false,
+          "parameters" : [ "chrome" ]
+        } ],
+        "uid" : "545ffcd85c70a94d1e4245dc065af2ad"
+      }, {
+        "name" : "ru.itis.tests.AuthorizationTest",
+        "children" : [ {
+          "name" : "authorization",
+          "uid" : "4f4e4eb4ec272bdd",
+          "parentUid" : "1054e350825ffefa5ee20c4052a360e6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624636781167,
+            "stop" : 1624636787918,
+            "duration" : 6751
+          },
+          "flaky" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "authorizationStudent",
+          "uid" : "67510e52c30678ac",
+          "parentUid" : "1054e350825ffefa5ee20c4052a360e6",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624636788111,
+            "stop" : 1624636789696,
+            "duration" : 1585
+          },
+          "flaky" : false,
+          "parameters" : [ "chrome" ]
+        } ],
+        "uid" : "1054e350825ffefa5ee20c4052a360e6"
+      } ],
+      "uid" : "59ee47ccded7b216304cbd98bfccd593"
+    }, {
+      "name" : "Test for Firefox browser",
+      "children" : [ {
+        "name" : "ru.itis.Tests.AuthorizationTest",
+        "children" : [ {
+          "name" : "authorization",
+          "uid" : "3f9d24a681c0268",
+          "parentUid" : "709962740097a63203c9b21bc99c292a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624632965644,
+            "stop" : 1624632976290,
+            "duration" : 10646
+          },
+          "flaky" : false,
+          "parameters" : [ "firefox" ]
+        }, {
+          "name" : "authorizationStudent",
+          "uid" : "974bfa3b013bcd88",
+          "parentUid" : "709962740097a63203c9b21bc99c292a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624632976295,
+            "stop" : 1624632976916,
+            "duration" : 621
+          },
+          "flaky" : false,
+          "parameters" : [ "firefox" ]
+        } ],
+        "uid" : "709962740097a63203c9b21bc99c292a"
+      }, {
+        "name" : "ru.itis.tests.AuthorizationTest",
+        "children" : [ {
+          "name" : "authorization",
+          "uid" : "b5011985e5e7fb77",
+          "parentUid" : "1d3373368925bc4016ca9e924941eeea",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624636783677,
+            "stop" : 1624636791518,
+            "duration" : 7841
+          },
+          "flaky" : false,
+          "parameters" : [ "firefox" ]
+        }, {
+          "name" : "authorizationStudent",
+          "uid" : "ed7323d2a2fa83c7",
+          "parentUid" : "1d3373368925bc4016ca9e924941eeea",
+          "status" : "passed",
+          "time" : {
+            "start" : 1624636791522,
+            "stop" : 1624636792274,
+            "duration" : 752
+          },
+          "flaky" : false,
+          "parameters" : [ "firefox" ]
+        } ],
+        "uid" : "1d3373368925bc4016ca9e924941eeea"
+      } ],
+      "uid" : "8a5f1c50b7dbf505878d46da4b022ebc"
+    } ],
+    "uid" : "4f26dde5cd0b5e43ba4287be426a0f93"
+  } ]
+}

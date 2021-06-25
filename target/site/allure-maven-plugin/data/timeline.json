@@ -1,0 +1,121 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-ADT77JS1",
+    "children" : [ {
+      "name" : "12972@LAPTOP-ADT77JS1.TestNG(15)",
+      "children" : [ {
+        "name" : "authorization",
+        "uid" : "4f4e4eb4ec272bdd",
+        "parentUid" : "64a3cb1e5a3f139bd57847120711e0da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624636781167,
+          "stop" : 1624636787918,
+          "duration" : 6751
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "authorizationStudent",
+        "uid" : "67510e52c30678ac",
+        "parentUid" : "64a3cb1e5a3f139bd57847120711e0da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624636788111,
+          "stop" : 1624636789696,
+          "duration" : 1585
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "64a3cb1e5a3f139bd57847120711e0da"
+    }, {
+      "name" : "8576@LAPTOP-ADT77JS1.TestNG(15)",
+      "children" : [ {
+        "name" : "authorizationStudent",
+        "uid" : "a1a72daccf264296",
+        "parentUid" : "3c2153739901159c37f39b1c7c39aff7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624632975168,
+          "stop" : 1624632976663,
+          "duration" : 1495
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "authorization",
+        "uid" : "c593045b042b606e",
+        "parentUid" : "3c2153739901159c37f39b1c7c39aff7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624632962938,
+          "stop" : 1624632975039,
+          "duration" : 12101
+        },
+        "flaky" : false,
+        "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "3c2153739901159c37f39b1c7c39aff7"
+    }, {
+      "name" : "8576@LAPTOP-ADT77JS1.TestNG(16)",
+      "children" : [ {
+        "name" : "authorizationStudent",
+        "uid" : "974bfa3b013bcd88",
+        "parentUid" : "2cb6ae776127875db27b473ba8be7b44",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624632976295,
+          "stop" : 1624632976916,
+          "duration" : 621
+        },
+        "flaky" : false,
+        "parameters" : [ "firefox" ]
+      }, {
+        "name" : "authorization",
+        "uid" : "3f9d24a681c0268",
+        "parentUid" : "2cb6ae776127875db27b473ba8be7b44",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624632965644,
+          "stop" : 1624632976290,
+          "duration" : 10646
+        },
+        "flaky" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "2cb6ae776127875db27b473ba8be7b44"
+    }, {
+      "name" : "12972@LAPTOP-ADT77JS1.TestNG(16)",
+      "children" : [ {
+        "name" : "authorizationStudent",
+        "uid" : "ed7323d2a2fa83c7",
+        "parentUid" : "a7f270f452f5f2ed702cfa7e28244f25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624636791522,
+          "stop" : 1624636792274,
+          "duration" : 752
+        },
+        "flaky" : false,
+        "parameters" : [ "firefox" ]
+      }, {
+        "name" : "authorization",
+        "uid" : "b5011985e5e7fb77",
+        "parentUid" : "a7f270f452f5f2ed702cfa7e28244f25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624636783677,
+          "stop" : 1624636791518,
+          "duration" : 7841
+        },
+        "flaky" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "a7f270f452f5f2ed702cfa7e28244f25"
+    } ],
+    "uid" : "bb2bd512cebeedf0a9db027ba54c8cd1"
+  } ]
+}

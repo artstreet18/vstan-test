@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-25T15:59:37Z" name="TestSuite" finished-at="2021-06-25T15:59:53Z" duration-ms="15481">
+    <groups>
+    </groups>
+    <test started-at="2021-06-25T15:59:37Z" name="Test for Chrome browser" finished-at="2021-06-25T15:59:50Z" duration-ms="12738">
+      <class name="ru.itis.tests.AuthorizationTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:ru.itis.tests.AuthorizationTest@2e3cdec2]" started-at="2021-06-25T18:59:37Z" name="setUp" finished-at="2021-06-25T18:59:41Z" duration-ms="3508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="authorization()[pri:0, instance:ru.itis.tests.AuthorizationTest@2e3cdec2]" started-at="2021-06-25T18:59:41Z" name="authorization" finished-at="2021-06-25T18:59:47Z" duration-ms="6826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorization -->
+        <test-method signature="authorizationStudent()[pri:0, instance:ru.itis.tests.AuthorizationTest@2e3cdec2]" started-at="2021-06-25T18:59:48Z" name="authorizationStudent" finished-at="2021-06-25T18:59:49Z" duration-ms="1592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizationStudent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ru.itis.tests.AuthorizationTest@2e3cdec2]" started-at="2021-06-25T18:59:49Z" name="tearDown" finished-at="2021-06-25T18:59:50Z" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ru.itis.tests.AuthorizationTest -->
+    </test> <!-- Test for Chrome browser -->
+    <test started-at="2021-06-25T15:59:37Z" name="Test for Firefox browser" finished-at="2021-06-25T15:59:53Z" duration-ms="15480">
+      <class name="ru.itis.tests.AuthorizationTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:ru.itis.tests.AuthorizationTest@9255c05]" started-at="2021-06-25T18:59:37Z" name="setUp" finished-at="2021-06-25T18:59:43Z" duration-ms="6107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="authorization()[pri:0, instance:ru.itis.tests.AuthorizationTest@9255c05]" started-at="2021-06-25T18:59:43Z" name="authorization" finished-at="2021-06-25T18:59:51Z" duration-ms="7842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorization -->
+        <test-method signature="authorizationStudent()[pri:0, instance:ru.itis.tests.AuthorizationTest@9255c05]" started-at="2021-06-25T18:59:51Z" name="authorizationStudent" finished-at="2021-06-25T18:59:52Z" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizationStudent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ru.itis.tests.AuthorizationTest@9255c05]" started-at="2021-06-25T18:59:52Z" name="tearDown" finished-at="2021-06-25T18:59:53Z" duration-ms="753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ru.itis.tests.AuthorizationTest -->
+    </test> <!-- Test for Firefox browser -->
+  </suite> <!-- TestSuite -->
+</testng-results>
