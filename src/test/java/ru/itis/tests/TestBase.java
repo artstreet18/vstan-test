@@ -42,10 +42,10 @@ public class TestBase {
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        main = PageFactory.initElements(driver, MainPage.class);
-        setSettings = PageFactory.initElements(driver, SetSettingsPage.class);
-        signIn = PageFactory.initElements(driver, SignInPage.class);
-        signUp = PageFactory.initElements(driver, SignUpPage.class);
+        main = new MainPage(driver);
+        setSettings = new SetSettingsPage(driver);
+        signIn = new SignInPage(driver);
+        signUp = new SignUpPage(driver);
     }
 
     @SneakyThrows

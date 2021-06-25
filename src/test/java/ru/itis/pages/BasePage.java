@@ -19,32 +19,32 @@ public class BasePage {
     }
 
     @Step(value = "go to homePage")
-    public BasePage goTo(){
+    protected BasePage goTo(){
         driver.get(SITE_URL);
         return this;
     }
 
-    public void waitVisibility(By elementBy){
+    protected void waitVisibility(By elementBy){
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
     }
 
-    public boolean isElementDisplayed(By elementBy){
+    protected boolean isElementDisplayed(By elementBy){
         waitVisibility(elementBy);
         return driver.findElement(elementBy).isDisplayed();
 
     }
 
-    public  void click(By elementBy){
+    protected   void click(By elementBy){
         waitVisibility(elementBy);
         driver.findElement(elementBy).click();
     }
 
-    public  void writeText(By elementBy, String text){
+    protected   void writeText(By elementBy, String text){
         waitVisibility(elementBy);
         driver.findElement(elementBy).sendKeys(text);
     }
 
-    public String readText(By elementBy){
+    protected String readText(By elementBy){
         waitVisibility(elementBy);
         return driver.findElement(elementBy).getText();
     }
