@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    protected final String SITE_URL = "https://thenewschool.dev/login";
+    protected final String SITE_URL = "https://motivator-fe5bb.web.app/#/";
     protected WebDriver driver;
     protected WebDriverWait wait;
 
@@ -19,7 +19,7 @@ public class BasePage {
     }
 
     @Step(value = "go to homePage")
-    protected BasePage goTo(){
+    public BasePage goTo(){
         driver.get(SITE_URL);
         return this;
     }

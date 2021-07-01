@@ -11,10 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import ru.itis.pages.MainPage;
-import ru.itis.pages.SetSettingsPage;
-import ru.itis.pages.SignInPage;
-import ru.itis.pages.SignUpPage;
+import ru.itis.pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,27 +22,36 @@ public class TestBase {
     public SetSettingsPage setSettings;
     public SignInPage signIn;
     public SignUpPage signUp;
+    private BasePage basePage;
 
     @BeforeClass
     @Parameters("browser")
     public void setUp(String browser) {
-        if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            FirefoxOptions options = new FirefoxOptions();
-            options.setHeadless(true);
-            driver = new FirefoxDriver(options);
-        } else if (browser.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
-            options.setHeadless(true);
-            driver = new ChromeDriver(options);
+        switch (browser){
+            case ("firefox") :
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.setHeadless(true);
+                driver = new FirefoxDriver(firefoxOptions);
+                break;
+            case ("chrome") :
+            default:
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions options = new ChromeOptions();
+                options.setHeadless(true);
+                driver = new ChromeDriver(options);
+                break;
         }
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         main = new MainPage(driver);
         setSettings = new SetSettingsPage(driver);
         signIn = new SignInPage(driver);
         signUp = new SignUpPage(driver);
+        basePage = new BasePage(driver);
+        basePage.goTo();
+
     }
 
     @SneakyThrows
