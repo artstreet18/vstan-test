@@ -1,5 +1,6 @@
 package ru.itis.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +11,7 @@ public class MainPage extends BasePage {
     }
 
     private By welcomeTextDiv;
-    private By signInButton;
+    private By signInButton = By.cssSelector(".sc-kEqXSa");
     private By signUpButton;
 
     public void signInButtonClick() {
@@ -21,5 +22,12 @@ public class MainPage extends BasePage {
     public void signUnButtonClick() {
         waitVisibility(signUpButton);
         click(signUpButton);
+    }
+
+    @Step(value = "Переход на страницу авторизации")
+    @Override
+    public MainPage goTo() {
+        driver.get(SITE_URL);
+        return this;
     }
 }

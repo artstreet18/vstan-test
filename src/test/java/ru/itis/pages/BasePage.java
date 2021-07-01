@@ -18,7 +18,7 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @Step(value = "go to homePage")
+    @Step(value = "переход на главную страницу")
     public BasePage goTo(){
         driver.get(SITE_URL);
         return this;
