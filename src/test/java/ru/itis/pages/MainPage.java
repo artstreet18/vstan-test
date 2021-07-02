@@ -14,9 +14,9 @@ public class MainPage extends BasePage {
     }
 
     private By welcomeTextDiv;
-    private By signInButton = By.cssSelector(".sc-kEqXSa");
+    private By signInButton = By.cssSelector(".sc-hBMUJo.dwClCW");
     private By signUpButton;
-    private By signOutButton = By.cssSelector(".sc-kEqXSa");
+    private By signOutButton = By.cssSelector(".sc-hBMUJo.dwClCW");
     private By obscureElement = By.cssSelector(".sc-eCApnc.ftKSen.shadow-exit.shadow-exit-active");
 
     public void signInButtonClick() {

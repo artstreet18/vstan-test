@@ -11,11 +11,11 @@ public class SignInPage extends BasePage {
         super(driver);
     }
 
-    private By signInButton = By.cssSelector(".sc-jrsJWt");
+    private By signInButton = By.cssSelector(".sc-dIsUp.fIuTO");
     private By loginField = By.name("email");
     private By passwordField = By.name("password");
-    private By loginText = By.cssSelector(".sc-gKAaRy.diEskx");
-    private By invalidCredentialsSpan = By.cssSelector(" .sc-gKAaRy.jhxdSk");
+    private By loginText = By.cssSelector(".sc-gKAaRy.bShPTq");
+    private By invalidCredentialsSpan = By.cssSelector(" .sc-gKAaRy.cZxjEj");
 
     @SneakyThrows
     @Step(value = "Авторизация")
