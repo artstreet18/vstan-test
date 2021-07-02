@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import ru.itis.pages.*;
 
@@ -22,7 +23,6 @@ public class TestBase {
     public SetSettingsPage setSettings;
     public SignInPage signIn;
     public SignUpPage signUp;
-    private BasePage basePage;
 
     @BeforeClass
     @Parameters("browser")
@@ -43,15 +43,19 @@ public class TestBase {
                 break;
         }
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         main = new MainPage(driver);
         setSettings = new SetSettingsPage(driver);
         signIn = new SignInPage(driver);
         signUp = new SignUpPage(driver);
-        basePage = new BasePage(driver);
-        basePage.goTo();
+        main.goTo();
+    }
 
+    @BeforeMethod
+    public void beforeMethod()
+    {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @SneakyThrows
