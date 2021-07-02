@@ -14,7 +14,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 15);
         PageFactory.initElements(driver, this);
     }
 
@@ -25,9 +25,12 @@ public class BasePage {
     }
 
     protected void waitVisibility(By elementBy){
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(elementBy));
     }
 
+    protected void elementToBeClickable(By elementBy){
+        wait.until(ExpectedConditions.elementToBeClickable(elementBy));
+    }
     protected boolean isElementDisplayed(By elementBy){
         waitVisibility(elementBy);
         return driver.findElement(elementBy).isDisplayed();
@@ -36,6 +39,7 @@ public class BasePage {
 
     protected   void click(By elementBy){
         waitVisibility(elementBy);
+        elementToBeClickable(elementBy);
         driver.findElement(elementBy).click();
     }
 

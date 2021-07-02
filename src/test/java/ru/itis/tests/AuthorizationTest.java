@@ -15,17 +15,41 @@ public class AuthorizationTest extends TestBase {
     @Description("In this test we will login as user")
     @Story(value = "Test for login with correct credentials")
     @Test
-    public void authorization() {
+    public void authorizationWithCorrectCredentials() {
         User user = User.builder()
                 .login("test")
                 .password("testpass")
                 .build();
         main.goTo().signInButtonClick();
+
         String expectedLogin = signIn
-                                .signIn(user)
-                                .authorizedLogin();
+                .signIn(user)
+                .authorizedLogin();
 
         Assert.assertEquals(expectedLogin, "test");
+    }
+
+    @Epic("TESTING FOR Motivator App ")
+    @Feature(value = "Authorization")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will try to login as user with incorrect credentials")
+    @Story(value = "Test for login with incorrect credentials")
+    @Test
+    public void authorizationWithIncorrectCredentials() {
+        User user = User.builder()
+                .login("test")
+                .password("incorrect")
+                .build();
+
+        main.goTo()
+                .signOut()
+                .signInButtonClick();
+
+        String expectedErrorMessage = signIn
+                .signIn(user)
+                .checkForErrorMessage();
+
+        Assert.assertEquals(expectedErrorMessage, "Неверный логин/пароль");
     }
 
 }

@@ -15,6 +15,7 @@ public class SignInPage extends BasePage {
     private By loginField = By.name("email");
     private By passwordField = By.name("password");
     private By loginText = By.cssSelector(".sc-gKAaRy.diEskx");
+    private By invalidCredentialsSpan = By.cssSelector(" .sc-gKAaRy.jhxdSk");
 
     @SneakyThrows
     @Step(value = "Авторизация")
@@ -37,10 +38,17 @@ public class SignInPage extends BasePage {
         writeText(passwordField, password);
         return this;
     }
-
+    
+    @Step(value = "Проверка соответствия логина")
     public String authorizedLogin(){
         return readText(loginText);
     }
+
+    @Step(value = "Верное сообщение об ошибке")
+    public String checkForErrorMessage(){
+        return readText(invalidCredentialsSpan);
+    }
+
 
     @Step(value = "Переход на страницу авторизации")
     @Override

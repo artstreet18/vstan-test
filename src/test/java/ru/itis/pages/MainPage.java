@@ -4,6 +4,9 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.regex.Pattern;
 
 public class MainPage extends BasePage {
     public MainPage(WebDriver driver) {
@@ -13,6 +16,8 @@ public class MainPage extends BasePage {
     private By welcomeTextDiv;
     private By signInButton = By.cssSelector(".sc-kEqXSa");
     private By signUpButton;
+    private By signOutButton = By.cssSelector(".sc-kEqXSa");
+    private By obscureElement = By.cssSelector(".sc-eCApnc.ftKSen.shadow-exit.shadow-exit-active");
 
     public void signInButtonClick() {
         waitVisibility(signInButton);
@@ -30,4 +35,12 @@ public class MainPage extends BasePage {
         driver.get(SITE_URL);
         return this;
     }
+
+    public MainPage signOut(){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(obscureElement));
+        click(signInButton);
+        return this;
+    }
+
+
 }
